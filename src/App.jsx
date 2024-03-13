@@ -6,13 +6,13 @@ import Edit from "./components/Edit";
 
 const App = () => {
   return (
-    <>
+    <div>
       <Routes>
         <Route path="/edit/:id" element={<Edit/>} />
         <Route path="/create" element={<Add />} />
         <Route path="/" element={<Home />} />
       </Routes>
-    </>
+    </div>
   );
 };
 

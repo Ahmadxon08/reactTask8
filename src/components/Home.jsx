@@ -7,7 +7,8 @@ const Home = () => {
   const [columns, setColumns] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/users")
+    axios
+      .get("http://localhost:3000/users")
       .then((res) => {
         setColumns(Object.keys(res.data[0]));
         setUsers(res.data);
@@ -35,8 +36,9 @@ const Home = () => {
 
   return (
     <div className="container my-5">
-      <div className="text-end">
-        <Link to="/create" className="btn btn-primary">
+      <div className="text-end  rounded d-flex p-3  justify-content-between bg-black bg-opacity-10">
+        <h1 className='fs-2 fw-bolder' >  User's information</h1>
+        <Link to="/create" className="btn fs-4 fw-bolder  justify-content-center btn-primary">
           Add +
         </Link>
       </div>
